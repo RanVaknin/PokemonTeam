@@ -1,6 +1,8 @@
 package com.example.pokemonteam;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.widget.TextView;
@@ -22,8 +24,10 @@ import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class MainActivity extends AppCompatActivity {
+    private RecyclerView mRecyclerView;
+    private RecyclerView.Adapter mAdapter;
+    private RecyclerView.LayoutManager mLayoutManager;
 
-    private TextView textViewResult;
     private List<Pokemon> pokemonTeam;
 
     @Override
@@ -31,12 +35,16 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        textViewResult = findViewById(R.id.pokemonName);
 
         StartingPokemon startingPokemon = new StartingPokemon();
-        List<Pokemon> initialTeam = startingPokemon.initializeStartingPokemon();
+        ArrayList<Pokemon> initialTeam = startingPokemon.initializeStartingPokemon();
+        mRecyclerView = findViewById(R.id.recyclerView);
+        mRecyclerView.setHasFixedSize(true);
+        mLayoutManager = new LinearLayoutManager(this);
+        mAdapter = new TeamAdapter(initialTeam);
 
-        textViewResult.setText(initialTeam.get(0).getName());
+        mRecyclerView.setLayoutManager(mLayoutManager);
+        mRecyclerView.setAdapter(mAdapter);
 
     }
 

@@ -13,13 +13,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class StartingPokemon {
-    private List<Pokemon> starterPokemon;
+    private ArrayList<Pokemon> starterPokemon;
 
     public StartingPokemon() {
         starterPokemon = new ArrayList<>();
     }
 
-    public List<Pokemon> initializeStartingPokemon(){
+    public ArrayList<Pokemon> initializeStartingPokemon(){
 
         ///////////    Charizard    \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
@@ -27,16 +27,16 @@ public class StartingPokemon {
         List<Move> charizardMoves = new ArrayList<>();
         List<Ability> charizardAbilities = new ArrayList<>();
         Sprite charizardSprite = new Sprite("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png","https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/6.png");
-        charizardTypes.add(new Type(new PokemonTypeReference("fire")));
-        charizardTypes.add(new Type(new PokemonTypeReference("flying")));
+        charizardTypes.add(new Type(new PokemonTypeReference("Fire")));
+        charizardTypes.add(new Type(new PokemonTypeReference("Flying")));
 
-        charizardMoves.add(new Move(new MoveReference("hyper-beam")));
-        charizardMoves.add(new Move(new MoveReference("flamethrower")));
-        charizardMoves.add(new Move(new MoveReference("leer")));
-        charizardMoves.add(new Move(new MoveReference("double-edge")));
+        charizardMoves.add(new Move(new MoveReference("Hyper-beam")));
+        charizardMoves.add(new Move(new MoveReference("Flamethrower")));
+        charizardMoves.add(new Move(new MoveReference("Leer")));
+        charizardMoves.add(new Move(new MoveReference("Double-edge")));
 
-        charizardAbilities.add(new Ability(new AbilityReference("blaze")));
-        charizardAbilities.add(new Ability(new AbilityReference("solar-power")));
+        charizardAbilities.add(new Ability(new AbilityReference("Blaze")));
+        charizardAbilities.add(new Ability(new AbilityReference("Solar-power")));
 
         Pokemon charizard = new Pokemon("Charizard", 75,6,905,
                 charizardTypes,charizardMoves,charizardAbilities,charizardSprite);
@@ -51,15 +51,15 @@ public class StartingPokemon {
         List<Move> hitmonleeMoves = new ArrayList<>();
         List<Ability> hitmonleeAbilities = new ArrayList<>();
         Sprite hitmonleeSprites = new Sprite("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/106.png","https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/106.png");
-        hitmonleeTypes.add(new Type(new PokemonTypeReference("fighting")));
+        hitmonleeTypes.add(new Type(new PokemonTypeReference("Fighting")));
 
-        hitmonleeMoves.add(new Move(new MoveReference("mega-punch")));
-        hitmonleeMoves.add(new Move(new MoveReference("rolling-kick")));
-        hitmonleeMoves.add(new Move(new MoveReference("double-punch")));
-        hitmonleeMoves.add(new Move(new MoveReference("rage")));
+        hitmonleeMoves.add(new Move(new MoveReference("Mega-punch")));
+        hitmonleeMoves.add(new Move(new MoveReference("Rolling-kick")));
+        hitmonleeMoves.add(new Move(new MoveReference("Double-punch")));
+        hitmonleeMoves.add(new Move(new MoveReference("Rage")));
 
-        hitmonleeAbilities.add(new Ability(new AbilityReference("limber")));
-        hitmonleeAbilities.add(new Ability(new AbilityReference("reckless")));
+        hitmonleeAbilities.add(new Ability(new AbilityReference("Limber")));
+        hitmonleeAbilities.add(new Ability(new AbilityReference("Reckless")));
 
         Pokemon hitmonlee = new Pokemon("Hitmonlee", 36,106,498,
                 hitmonleeTypes,hitmonleeMoves,hitmonleeAbilities,hitmonleeSprites);
@@ -74,15 +74,15 @@ public class StartingPokemon {
         List<Ability> raichuAbilities = new ArrayList<>();
         Sprite raichuSprites = new Sprite("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/26.png","https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/26.png");
 
-        raichuTypes.add(new Type(new PokemonTypeReference("electric")));
+        raichuTypes.add(new Type(new PokemonTypeReference("Electric")));
 
-        raichuMoves.add(new Move(new MoveReference("body-slam")));
-        raichuMoves.add(new Move(new MoveReference("thunderbolt")));
-        raichuMoves.add(new Move(new MoveReference("shock-wave")));
-        raichuMoves.add(new Move(new MoveReference("dig")));
+        raichuMoves.add(new Move(new MoveReference("Body-slam")));
+        raichuMoves.add(new Move(new MoveReference("Thunderbolt")));
+        raichuMoves.add(new Move(new MoveReference("Shock-wave")));
+        raichuMoves.add(new Move(new MoveReference("Dig")));
 
-        raichuAbilities.add(new Ability(new AbilityReference("static")));
-        raichuAbilities.add(new Ability(new AbilityReference("lightning-rod")));
+        raichuAbilities.add(new Ability(new AbilityReference("Static")));
+        raichuAbilities.add(new Ability(new AbilityReference("Lightning-rod")));
 
         Pokemon raichu = new Pokemon("Raichu", 51,26,300,
                 raichuTypes,raichuMoves,raichuAbilities,raichuSprites);
@@ -96,15 +96,15 @@ public class StartingPokemon {
         List<Ability> kinglerAbilities = new ArrayList<>();
         Sprite kinglerSprites = new Sprite("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/99.png","https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/99.png");
 
-        kinglerTypes.add(new Type(new PokemonTypeReference("water")));
+        kinglerTypes.add(new Type(new PokemonTypeReference("Water")));
 
-        kinglerMoves.add(new Move(new MoveReference("bubble-beam")));
-        kinglerMoves.add(new Move(new MoveReference("metal-claw")));
-        kinglerMoves.add(new Move(new MoveReference("harden")));
-        kinglerMoves.add(new Move(new MoveReference("water-gun")));
+        kinglerMoves.add(new Move(new MoveReference("Bubble-beam")));
+        kinglerMoves.add(new Move(new MoveReference("Metal-claw")));
+        kinglerMoves.add(new Move(new MoveReference("Harden")));
+        kinglerMoves.add(new Move(new MoveReference("Water-gun")));
 
-        kinglerAbilities.add(new Ability(new AbilityReference("hyper-cutter")));
-        kinglerAbilities.add(new Ability(new AbilityReference("shell-armor")));
+        kinglerAbilities.add(new Ability(new AbilityReference("Hyper-cutter")));
+        kinglerAbilities.add(new Ability(new AbilityReference("Shell-armor")));
 
         Pokemon kingler = new Pokemon("Kingler", 29,99,600,
                 kinglerTypes,kinglerMoves,kinglerAbilities,kinglerSprites);
@@ -119,17 +119,17 @@ public class StartingPokemon {
         List<Ability> rhydonAbilities = new ArrayList<>();
         Sprite rhydonSprites = new Sprite("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/112.png","https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/112.png");
 
-        rhydonTypes.add(new Type(new PokemonTypeReference("ground")));
-        rhydonTypes.add(new Type(new PokemonTypeReference("rock")));
+        rhydonTypes.add(new Type(new PokemonTypeReference("Ground")));
+        rhydonTypes.add(new Type(new PokemonTypeReference("Rock")));
 
 
-        rhydonMoves.add(new Move(new MoveReference("leer")));
-        rhydonMoves.add(new Move(new MoveReference("horn-attack")));
-        rhydonMoves.add(new Move(new MoveReference("roar")));
-        rhydonMoves.add(new Move(new MoveReference("fire-punch")));
+        rhydonMoves.add(new Move(new MoveReference("Leer")));
+        rhydonMoves.add(new Move(new MoveReference("Horn-attack")));
+        rhydonMoves.add(new Move(new MoveReference("Roar")));
+        rhydonMoves.add(new Move(new MoveReference("Fire-punch")));
 
-        rhydonAbilities.add(new Ability(new AbilityReference("reckless")));
-        rhydonAbilities.add(new Ability(new AbilityReference("lightning-rod")));
+        rhydonAbilities.add(new Ability(new AbilityReference("Reckless")));
+        rhydonAbilities.add(new Ability(new AbilityReference("Lightning-rod")));
 
         Pokemon rhydon = new Pokemon("Rhydon", 71,112,1200,
                 rhydonTypes,rhydonMoves,rhydonAbilities,rhydonSprites);
@@ -145,17 +145,17 @@ public class StartingPokemon {
         List<Ability> jigglypuffAbilities = new ArrayList<>();
         Sprite jigglypuffSprites = new Sprite("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/39.png","https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/39.png");
 
-        jigglypuffTypes.add(new Type(new PokemonTypeReference("normal")));
-        jigglypuffTypes.add(new Type(new PokemonTypeReference("fairy")));
+        jigglypuffTypes.add(new Type(new PokemonTypeReference("Normal")));
+        jigglypuffTypes.add(new Type(new PokemonTypeReference("Fairy")));
 
 
-        jigglypuffMoves.add(new Move(new MoveReference("leer")));
-        jigglypuffMoves.add(new Move(new MoveReference("thunder-punch")));
-        jigglypuffMoves.add(new Move(new MoveReference("ice-beam")));
-        jigglypuffMoves.add(new Move(new MoveReference("double-edge")));
+        jigglypuffMoves.add(new Move(new MoveReference("Leer")));
+        jigglypuffMoves.add(new Move(new MoveReference("Thunder-punch")));
+        jigglypuffMoves.add(new Move(new MoveReference("Ice-beam")));
+        jigglypuffMoves.add(new Move(new MoveReference("Double-edge")));
 
-        jigglypuffAbilities.add(new Ability(new AbilityReference("competitive")));
-        jigglypuffAbilities.add(new Ability(new AbilityReference("cute-charm")));
+        jigglypuffAbilities.add(new Ability(new AbilityReference("Competitive")));
+        jigglypuffAbilities.add(new Ability(new AbilityReference("Cute-charm")));
 
         Pokemon jigglypuff = new Pokemon("Jigglypuff", 21,39,55,
                 jigglypuffTypes,jigglypuffMoves,jigglypuffAbilities,jigglypuffSprites);
@@ -171,17 +171,17 @@ public class StartingPokemon {
         List<Ability> slowbroAbilities = new ArrayList<>();
         Sprite slowbroSprites = new Sprite("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/80.png","https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/80.png");
 
-        slowbroTypes.add(new Type(new PokemonTypeReference("water")));
-        slowbroTypes.add(new Type(new PokemonTypeReference("psychic")));
+        slowbroTypes.add(new Type(new PokemonTypeReference("Water")));
+        slowbroTypes.add(new Type(new PokemonTypeReference("Psychic")));
 
 
-        slowbroMoves.add(new Move(new MoveReference("flamethrower")));
-        slowbroMoves.add(new Move(new MoveReference("mega-punch")));
-        slowbroMoves.add(new Move(new MoveReference("ice-beam")));
-        slowbroMoves.add(new Move(new MoveReference("earthquake")));
+        slowbroMoves.add(new Move(new MoveReference("Flamethrower")));
+        slowbroMoves.add(new Move(new MoveReference("Mega-punch")));
+        slowbroMoves.add(new Move(new MoveReference("Ice-beam")));
+        slowbroMoves.add(new Move(new MoveReference("Earthquake")));
 
-        slowbroAbilities.add(new Ability(new AbilityReference("oblivious")));
-        slowbroAbilities.add(new Ability(new AbilityReference("own-tempo")));
+        slowbroAbilities.add(new Ability(new AbilityReference("Oblivious")));
+        slowbroAbilities.add(new Ability(new AbilityReference("Own-tempo")));
 
         Pokemon slowbro = new Pokemon("Slowbro", 44,80,785,
                 slowbroTypes,slowbroMoves,slowbroAbilities,slowbroSprites);
