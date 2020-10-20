@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.widget.TextView;
 
 public class IndividualPokemonView extends AppCompatActivity {
-    TextView textViewResult ;
+    TextView textViewResult;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -14,7 +14,5 @@ public class IndividualPokemonView extends AppCompatActivity {
 
 
     }
-
-
 
 }
