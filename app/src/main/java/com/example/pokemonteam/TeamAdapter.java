@@ -15,6 +15,7 @@ import com.example.pokemonteam.models.Pokemon;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
 public class TeamAdapter extends RecyclerView.Adapter<TeamAdapter.TeamViewHolder> implements Filterable {
@@ -54,14 +55,14 @@ public class TeamAdapter extends RecyclerView.Adapter<TeamAdapter.TeamViewHolder
     public void onBindViewHolder(@NonNull TeamViewHolder holder, int position) {
         Pokemon current = pokemonTeam.get(position);
         Picasso.get().load(current.getSprite().getFrontImg()).into(holder.mImageView);
-        holder.pokemonName.append(" " + current.getName());
+        holder.pokemonName.setText("Name: " + current.getName());
         holder.pokemonLevel.setText("Level " + current.getLevel());
         String type1 = current.getTypes().get(0).getType().getName();
         String type2 = "";
         if(current.getTypes().size() > 1){
             type2 = ", " + current.getTypes().get(1).getType().getName();
         }
-        holder.pokemonType.append(" " + type1 + type2);
+        holder.pokemonType.setText("Types: " + type1 + type2);
     }
 
     @Override
@@ -73,33 +74,36 @@ public class TeamAdapter extends RecyclerView.Adapter<TeamAdapter.TeamViewHolder
     public Filter getFilter() {
         return teamFilter;
     }
+
     private Filter teamFilter = new Filter() {
         @Override
         protected FilterResults performFiltering(CharSequence constraint) {
             List<Pokemon> filteredList = new ArrayList<>();
 
-            if(constraint == null || constraint.length() == 0){
+            if (constraint.toString().toLowerCase().isEmpty()) {
                 filteredList.addAll(pokemonTeamFull);
-            } else {
-                String filterPattern = constraint.toString().toLowerCase().trim();
 
-                for(Pokemon pokemon : pokemonTeamFull){
-                    if(pokemon.getName().toLowerCase().contains(filterPattern)){
+            } else {
+                for (Pokemon pokemon : pokemonTeamFull) {
+                    if (pokemon.getName().toLowerCase().contains(constraint.toString().toLowerCase())) {
                         filteredList.add(pokemon);
                     }
                 }
             }
-            FilterResults results = new FilterResults();
-            results.values = filteredList;
+            FilterResults filterResults = new FilterResults();
+            filterResults.values = filteredList;
+            return filterResults;
 
-            return results;
         }
 
         @Override
         protected void publishResults(CharSequence constraint, FilterResults results) {
             pokemonTeam.clear();
-            pokemonTeam.addAll((List) results.values);
+            pokemonTeam.addAll((Collection<? extends Pokemon>) results.values);
+
+            notifyDataSetChanged();
         }
+
     };
 
 

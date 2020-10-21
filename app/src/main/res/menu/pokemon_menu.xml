@@ -2,8 +2,15 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item android:id="@+id/searchBar"
-        android:icon="@drawable/ic_baseline_search_24"
+        android:icon="@mipmap/pokedex_foreground"
         android:title="Search"
-        app:showAsAction="ifRoom|collapseActionView"
+        app:showAsAction="always|collapseActionView"
         app:actionViewClass="androidx.appcompat.widget.SearchView"/>
+
+    <item android:id="@+id/hamburger"
+        android:icon="@mipmap/hamburger_foreground"
+        android:title="hamburger"
+        app:showAsAction="always|collapseActionView"/>
+
+
 </menu>
