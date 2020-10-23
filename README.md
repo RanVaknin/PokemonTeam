@@ -9,7 +9,7 @@ In this app you start with a pokemon team consisting of 7 Pokemon.
 
 You can filter a desired Pokemon by hittingthe blue pokedex ball on the menu and typing in your search criteria.
 
-<img src="https://github.com/RanVaknin/PokemonTeam/blob/master/searchbar.png" align="left "height="50%" width="50%" >
+<img src="https://github.com/RanVaknin/PokemonTeam/blob/master/searchbar.png" align="left" height="50%" width="50%" >
 
 
 If you want to learn about a Pokemon on your team you can do so by clicking on it.
