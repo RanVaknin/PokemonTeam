@@ -13,5 +13,4 @@ public interface PokemonApi {
     @GET("pokemon/{id}")
     Observable<Pokemon> getPokemon(@Path("id") int id);
 
-
 }
