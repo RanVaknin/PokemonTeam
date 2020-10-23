@@ -26,5 +26,5 @@ From your android device download the app-debug.apk and install it on your devic
 https://codinginflow.com ( RecyclerView, OnClickListeners, Notifications setup, Search Bar implementations, helper toolbars)
 
 Rx library and Observables:
-https://www.youtube.com/watch?v=Tux1nhBPl_w
-https://www.youtube.com/watch?v=ejQI3kGrplI
+- https://www.youtube.com/watch?v=Tux1nhBPl_w
+- https://www.youtube.com/watch?v=ejQI3kGrplI
