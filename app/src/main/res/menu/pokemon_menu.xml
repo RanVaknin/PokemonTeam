@@ -10,7 +10,17 @@
     <item android:id="@+id/hamburger"
         android:icon="@mipmap/hamburger_foreground"
         android:title="hamburger"
-        app:showAsAction="always|collapseActionView"/>
+
+        app:showAsAction="always|collapseActionView">
+
+    <item android:id="@+id/generateTeam"
+        android:title="Generate Team"
+        app:showAsAction="never"/>
+        <item android:id="@+id/beacon"
+            android:title="Enable/Disable Beacon App"
+            app:showAsAction="never"/>
+    </item>
+
 
 
 </menu>
