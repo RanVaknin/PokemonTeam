@@ -3,7 +3,7 @@
 ## Overview:
 
 In this app you start with a pokemon team consisting of 7 Pokemon. 
-![Main Menu](https://github.com/RanVaknin/PokemonTeam/blob/master/mainscreen.png | width=200)
+![Main Menu](https://github.com/RanVaknin/PokemonTeam/blob/master/mainscreen.png){:height="50%" width="50%"}
 
 You can filter a desired Pokemon by hittingthe blue pokedex ball on the menu and typing in your search criteria.
 ![Search and filter](https://github.com/RanVaknin/PokemonTeam/blob/master/searchbar.png)
